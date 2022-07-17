@@ -42,5 +42,3 @@ def leaderboard():
     return flask.render_template('leaderboard.html', 
         data=data)
 
-
-app.run(port = 17995, debug=True)
