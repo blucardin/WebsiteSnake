@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="../static/snake.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Leaderboard!</title>
+    <link rel="stylesheet" href="../static/leaderboard.css">
+  </head>
+  <body>
+    <div class="menu">
+        <div style = "text-align:center;">
+            <a href="../game">
+                <img src="../static/snake.png" alt="snake logo" width="50">
+            </a>
+         </div>
+         <div style = "text-align:center; padding-bottom: 10px;">
+            <a href="../game">
+                Play Game
+            </a>
+         </div>
+        
+      
+    <table>
+        <thead>
+            <tr>
+                <th>Rank</th>
+                <th>Score</th>
+                <th>Name</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+        <tbody>    
+            {% for record in data %}
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td>{{ record[1] }}</td>
+                <td>{{ record[0] }}</td>
+                <td>{{ record[2] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+  </div>
+  </body>
