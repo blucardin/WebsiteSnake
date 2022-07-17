@@ -43,4 +43,4 @@ def leaderboard():
         data=data)
 
 
-app.run(debug=True)
+app.run(port = 8080, debug=True)
